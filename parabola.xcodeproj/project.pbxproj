@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1624117F2043389B00FB4986 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1624117D2043389B00FB4986 /* Model.xcdatamodeld */; };
+		169D47F82044369D007D4434 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169D47F72044369D007D4434 /* Constants.swift */; };
 		16FC5BA3203E8FCE00B856D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FC5BA2203E8FCE00B856D1 /* AppDelegate.swift */; };
 		16FC5BA8203E8FCF00B856D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16FC5BA6203E8FCF00B856D1 /* Main.storyboard */; };
 		16FC5BAA203E8FCF00B856D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16FC5BA9203E8FCF00B856D1 /* Assets.xcassets */; };
@@ -46,6 +47,7 @@
 
 /* Begin PBXFileReference section */
 		1624117E2043389B00FB4986 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		169D47F72044369D007D4434 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Utilities/Constants.swift; sourceTree = "<group>"; };
 		16FC5B9F203E8FCE00B856D1 /* parabola.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = parabola.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16FC5BA2203E8FCE00B856D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16FC5BA7203E8FCF00B856D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 			children = (
 				16FC5BA9203E8FCF00B856D1 /* Assets.xcassets */,
 				16FC5BAE203E8FCF00B856D1 /* Info.plist */,
+				169D47F72044369D007D4434 /* Constants.swift */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 				16FC5C292042A02600B856D1 /* Reachability.swift in Sources */,
 				16FC5BD7203E941C00B856D1 /* FavouritesViewController.swift in Sources */,
 				16FC5BE2203EA84300B856D1 /* Article.swift in Sources */,
+				169D47F82044369D007D4434 /* Constants.swift in Sources */,
 				1624117F2043389B00FB4986 /* Model.xcdatamodeld in Sources */,
 				16FC5BD5203E91B500B856D1 /* DetailViewController.swift in Sources */,
 			);

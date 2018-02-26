@@ -22,7 +22,7 @@ class DBManager {
 		let managedContext =
 			appDelegate.persistentContainer.viewContext
   
-		let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "OArticle")
+		let fetchRequest = NSFetchRequest<NSManagedObject>(entityName:Constants.kEntityName)
   
 		do {
 			oarticles = try managedContext.fetch(fetchRequest)
@@ -46,10 +46,10 @@ class DBManager {
 			return
 		}
 		let managedContext = appDelegate.persistentContainer.viewContext
-		let entity = NSEntityDescription.entity(forEntityName: "OArticle",
+		let entity = NSEntityDescription.entity(forEntityName: Constants.kEntityName,
 	                           in: managedContext)!
 		
-		let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "OArticle")
+		let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: Constants.kEntityName)
 		
 		do {
 			let items = try managedContext.fetch(fetchRequest)

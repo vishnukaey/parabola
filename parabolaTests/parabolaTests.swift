@@ -7,30 +7,50 @@
 //
 
 import XCTest
+
 @testable import parabola
+
+var systemUnderTest: MainViewController!
+
 
 class parabolaTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+		let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+		
+		//get the ViewController we want to test from the storyboard (note the identifier is the id explicitly set in the identity inspector)
+		systemUnderTest = storyboard.instantiateViewController(withIdentifier: "MainViewControlller") as! MainViewController
+		  _ = systemUnderTest.view
     }
-    
+	
+	func testSUT_CanInstantiateViewController() {
+		
+		XCTAssertNotNil(systemUnderTest)
+	}
+	
+	func testSUT_TableViewIsNotNilAfterViewDidLoad() {
+		
+		XCTAssertNotNil(systemUnderTest.tableView)
+	}
+	
+	func testSUT_ProgressHUD(){
+		XCTAssertNotNil(ProgressHUD(text:""))
+	}
+	
+	func testSUT_ArticleTableViewCell(){
+		XCTAssertNotNil(ArticleTableViewCell())
+	}
+	
+	func testSUT_Article(){
+		let article: Article = Article.init(json: ["title":"News Today","author":"News Today","url":"News Today","description":"News Today","urlToImage":"News Today","publishedAt":"News Today"])!
+		XCTAssertEqual(article.title, "News Today")
+	}
+	
+	
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
+	
 }

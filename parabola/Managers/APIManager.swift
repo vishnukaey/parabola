@@ -8,14 +8,12 @@
 
 
 class APIManager {
-	
-	let baseURL = "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=eb018d4f59a54cbb84704d6373d78365"
-	
+		
 	static let sharedInstance = APIManager()
 	
 	func getArticles(onSuccess: @escaping(Any) -> Void, onFailure: @escaping(Error) -> Void){
 		let manager = WebServiceManager.init()
-		let url : String = baseURL
+		let url : String = Constants.baseURL
 		manager.getHTTPRequestUsingParamsAndURL(urlString: url, onSuccess:{jsondata in onSuccess(self.parseJSON(jsondata: jsondata as! [String : Any]))},onFailure: {error in onFailure(error)})
 	}
 	

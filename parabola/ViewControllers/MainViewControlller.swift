@@ -30,7 +30,6 @@ class MainViewController: UITableViewController {
 		uiRefreshControl.addTarget(self, action: #selector(MainViewController.refresh), for: UIControlEvents.valueChanged)
 		tableView.addSubview(uiRefreshControl) // not required when using UITableViewController
 		
-		
 		//Get top articles from Live News feed
 		getArticles()
 	}
